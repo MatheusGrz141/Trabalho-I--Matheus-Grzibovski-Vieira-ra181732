@@ -203,7 +203,8 @@ h2 span {
   left: 6.56%;
   right: 85.01%;
   top: calc(50% - 22px / 2 + 94px);
-
+  display: flex;
+justify-content: ;
   font-size: 18px;
   line-height: 21px;
 
@@ -211,11 +212,11 @@ h2 span {
 }
 
 #textArea {
-  min-width: 496px;
   min-height: 141px;
-  max-width: 496px;
+  max-width: 480px;
+  min-width: 480px;
   max-height: 141px;
-  margin: 15px 0 32px 0;
+  margin:30px 30px 0 0   ;
   padding: 10px;
   background-color: #dde3e9;
   border: 1px solid #2f3676;
@@ -275,9 +276,29 @@ h2 span {
   color: #00c57c;
 }
 
-@media (min-width: 780px) {
+@media (max-width: 780px) {
+  h1 {
+    margin: 0;
+  }
+  html {
+    width: 780px;
+    height: fit-content;
+  }
+  body {
+    margin: 0;
+    height: fit-content;
+  }
   .main {
-    max-width: 90%;
-    margin: 50px auto 200px;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+  }
+  .cabecalho svg {
+    position: absolute;
+    border-radius: 8px;
+  }
+  #textArea {
+    min-width: 80%;
+   
   }
 }
