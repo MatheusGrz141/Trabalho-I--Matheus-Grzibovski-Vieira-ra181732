@@ -13,9 +13,13 @@ class Controller{
         document.querySelector("#Enviar").addEventListener('click' , () =>{
             this.enviar();
         })
-        
-        
-        this.init();
+        const myNumberInput = document.getElementById("quantidade");
+        myNumberInput.addEventListener("input", function() {
+            if (this.value <= 0) {
+                this.value = 0;
+            }
+        });
+     this.init()
     }
     adicionar(){
         let valor = parseInt(document.querySelector('#quantidade').value) 
