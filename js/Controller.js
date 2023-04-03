@@ -13,7 +13,7 @@ class Controller{
         document.querySelector("#Enviar").addEventListener('click' , () =>{
             this.enviar();
         })
-      
+        
         
         this.init();
     }
@@ -60,10 +60,24 @@ class Controller{
     enviar(){
         let texto =document.querySelector("#textArea").value;
         let qtd = parseInt(document.querySelector('#quantidade').value);
-        let novoModel = new Model('sticker',qtd,texto);
-        let novaView = new View(novoModel.getTexto)
+        
+        
+        const opcoes = document.getElementsByName("check");
+        let opcaoSelecionada;
+        for (let i = 0; i < opcoes.length; i++) {
+            if (opcoes[i].checked) {
+                opcaoSelecionada = opcoes[i].value;
+                break;
+            }
+        }
+        
+        let novoModel = new Model(opcaoSelecionada,qtd,texto );
+        let novaView = new View(novoModel)
         document.querySelector("#mensagem").innerHTML =novaView.template(); 
-        this.init()
+
+
+        console.log(novoModel)
+        this.init();
         
     }
     init(){

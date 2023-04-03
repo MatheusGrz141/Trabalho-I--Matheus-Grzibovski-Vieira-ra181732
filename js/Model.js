@@ -1,11 +1,12 @@
 class Model{
-    constructor(stickers,quantidade,texto){
-        this.stickers =stickers;
+    constructor(opcaoSelecionada,quantidade,texto){
+        this.opcaoSelecionada =opcaoSelecionada ;
         this.quantidade =quantidade;
         this.texto =texto;
-    }
-    get getStickers(){
-        return this.stickers;
+        
+    }  
+    get getOpcaoSelecionada(){
+        return this.opcaoSelecionada;
     }
     get getQuantidade(){
         return this.quantidade;

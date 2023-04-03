@@ -32,12 +32,9 @@ h2 span {
   text-align: left;
 }
 .main {
-  background-color: #f2f2f2;
-  margin: auto;
-  max-width: 560px;
-  min-width: 560px;
+  width: 560px;
   height: 794px;
-  width: 100%;
+  background-color: #f2f2f2;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
@@ -218,7 +215,6 @@ h2 span {
   border: 1px solid #2f3676;
   border-radius: 4px;
   font-weight: 500;
-
 }
 .caixaEnviar {
   width: 100%;
@@ -274,34 +270,20 @@ h2 span {
 }
 
 @media (max-width:720px) {
-  html,
-  body {
+  body,
+  html {
     margin: 0;
-    min-width: 90%;
-    max-width: 90%;
     padding: 0;
-
-    height: fit-content;
   }
   .main {
-    min-width: 100vw;
+/*  margin: 40px  0 40px;
+    padding: 0; */
   }
 
-  .cabecalho {
-    min-width: 100vw;
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  .cabecalho svg {
-    min-width: 100vw;
-    max-width: 100%;
-    width: 100%;
-  }
   #textArea {
     max-width: 85%;
     min-width: 85%;
     margin: 32px 0;
-    
   }
   .caixaEnviar {
     min-width: 100%;
@@ -316,8 +298,8 @@ h2 span {
 
   .botaoEnviar {
     margin: 0 0 32px 0;
-    padding: 30px ;
+    padding: 30px;
     width: 200px;
-  height: auto;
+    height: auto;
   }
 }
