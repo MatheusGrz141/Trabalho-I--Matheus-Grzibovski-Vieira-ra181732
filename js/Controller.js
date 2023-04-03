@@ -74,9 +74,6 @@ class Controller{
         let novoModel = new Model(opcaoSelecionada,qtd,texto );
         let novaView = new View(novoModel)
         document.querySelector("#mensagem").innerHTML =novaView.template(); 
-
-
-        console.log(novoModel)
         this.init();
         
     }
