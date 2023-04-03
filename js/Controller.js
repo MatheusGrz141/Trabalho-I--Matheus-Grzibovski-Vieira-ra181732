@@ -18,8 +18,12 @@ class Controller{
             if (this.value <= 0) {
                 this.value = 0;
             }
+            document.querySelector("#Enviar").disabled = true;
+            document.querySelector("#Enviar").classList.add("erro");
+            document.querySelector("#Diminuir").disabled = true;
+            document.querySelector("#Diminuir").classList.add("erro");
         });
-     this.init()
+        this.init()
     }
     adicionar(){
         let valor = parseInt(document.querySelector('#quantidade').value) 
@@ -31,7 +35,6 @@ class Controller{
             
             document.querySelector("#Enviar").disabled = false;
             document.querySelector("#Enviar").classList.remove("erro");
-            
             document.querySelector("#Diminuir").disabled = false;
             document.querySelector("#Diminuir").classList.remove("erro");
         }
@@ -44,16 +47,12 @@ class Controller{
         if( valor > 0){
             document.querySelector("#Enviar").disabled = false;
             document.querySelector("#Enviar").classList.remove("erro");
-            
-            
             document.querySelector("#Diminuir").classList.remove("erro");
             document.querySelector('#quantidade').value=parseInt(valor);
             
         }else {
             document.querySelector("#Enviar").disabled = true;
             document.querySelector("#Enviar").classList.add("erro");
-            
-            
             document.querySelector("#Diminuir").disabled = true;
             document.querySelector("#Diminuir").classList.add("erro");
             document.querySelector('#quantidade').value=parseInt(0);
@@ -64,7 +63,6 @@ class Controller{
     enviar(){
         let texto =document.querySelector("#textArea").value;
         let qtd = parseInt(document.querySelector('#quantidade').value);
-        
         
         const opcoes = document.getElementsByName("check");
         let opcaoSelecionada;

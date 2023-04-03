@@ -2,10 +2,9 @@
   font-family: "Inter";
   font-weight: 700;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 body {
@@ -184,7 +183,7 @@ h2 span {
 .contador #quantidade {
   resize: none;
   box-sizing: border-box;
-
+  text-align: center;
   width: 60px;
   padding: 5px;
   font-size: 24px;
@@ -214,7 +213,7 @@ h2 span {
 
 #textArea {
   resize: none;
-  
+
   width: 480px;
   height: 141px;
   margin: 30px 30px 0 0;
@@ -278,20 +277,34 @@ h2 span {
   color: #00c57c;
 }
 
-@media (max-width:720px) {
+@media (max-width: 720px) {
   body,
   html {
+    min-width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
   .main {
-width: 100%;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+  }
+  .cabecalho {
+    width: 100%;
+    min-width: 100%;
+  }
+  .cabecalho svg {
+    width: 100%;
   }
 
   #textArea {
-    max-width: 85%;
-    min-width: 85%;
-    margin: 32px 0;
+    max-width: 90%;
+    min-width: 90%;
+    margin: 32px auto;
   }
   .caixaEnviar {
     min-width: 100%;
@@ -299,6 +312,7 @@ width: 100%;
     margin: auto;
     flex-direction: column;
     gap: 20px;
+    box-shadow: none;
   }
   #mensagem p {
     margin: auto;
@@ -309,5 +323,15 @@ width: 100%;
     padding: 30px;
     width: 200px;
     height: auto;
+  }
+
+  .stickers {
+  
+   
+    max-width: 210px;
+  }
+  .sticker {
+    width: 110px;
+    
   }
 }
