@@ -301,9 +301,10 @@ h1 span {
   }
 
   #textArea {
-    max-width: 90%;
-    min-width: 90%;
-    margin: 32px auto;
+    max-width: 100%;
+    
+    margin: 32px 0 ;
+    
   }
   .caixaEnviar {
     min-width: 100%;
