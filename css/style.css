@@ -11,7 +11,6 @@ body {
   background: #663399;
 }
 
-
 h1 {
   width: 219px;
   height: 99px;
@@ -90,27 +89,13 @@ h1 span {
   height: 24px;
   background: #2f3676;
   position: relative;
-}
-.sticker .check:before {
-  appearance: none;
-  border-radius: 4px;
-  border: none;
-  width: 24px;
-  height: 24px;
-  background: #2f3676;
-  position: relative;
-  content: "";
-  position: absolute;
-  opacity: 0;
   cursor: pointer;
-  transition: 0.2s;
 }
+
 .sticker .check:checked {
   content: url(../imagens/checked.svg);
-  opacity: 1;
   cursor: pointer;
   background: white;
-
   transition: 0.2s;
 }
 .sticker .check:focus {
@@ -118,10 +103,13 @@ h1 span {
   transition: 0.2s;
 }
 .stickers .sticker label {
+  font-weight: 300;
   cursor: pointer;
   margin: 0 0 0 9px;
 }
-
+.contador {
+  height: fit-content;
+}
 .contador p {
   margin: 32px 32px 15px 32px;
   height: 22px;
@@ -136,7 +124,6 @@ h1 span {
 }
 .contador div {
   width: fit-content;
-  height: 42px;
 
   display: flex;
   align-items: center;
@@ -169,14 +156,15 @@ h1 span {
   background: #191847;
   cursor: pointer;
 }
-.contador .erro {
+.contador .desabilitado {
   background: #c5cfd6;
 }
-.contador .erro:hover {
+.contador .desabilitado:hover {
   background: #c5cfd6;
   cursor: not-allowed;
 }
-.contador #quantidade {
+
+.contador .quantidade {
   resize: none;
   box-sizing: border-box;
   text-align: center;
@@ -249,12 +237,13 @@ h1 span {
   border-radius: 7px;
   cursor: pointer;
 }
-.caixaEnviar .botaoEnviar.erro {
+.caixaEnviar .botaoEnviar.desabilitado {
   background: #c5cfd6;
   border: 2px solid #555555;
   border-radius: 7px;
+  color: #555555;
 }
-.caixaEnviar .botaoEnviar.erro:hover {
+.caixaEnviar .botaoEnviar.desabilitado:hover {
   background: #c5cfd6;
   border: 2px solid #555555;
   border-radius: 7px;
@@ -271,6 +260,21 @@ h1 span {
   line-height: 21px;
   margin-left: 32px;
   color: #00c57c;
+}
+.contador .quantidade.erro {
+  background-color: #f59393;
+  border: 1px solid #f33232;
+  color: #071723;
+}
+.sticker .check.erro {
+  background-color: #f59393;
+  border: 1px solid #f33232;
+  color: #071723;
+}
+
+
+#mensagem p.erro {
+  color: #f33232;
 }
 
 @media (max-width: 720px) {
@@ -302,9 +306,8 @@ h1 span {
 
   #textArea {
     max-width: 85%;
-    
-    margin: 32px 0 ;
-    
+
+    margin: 32px 0;
   }
   .caixaEnviar {
     min-width: 100%;
@@ -326,12 +329,9 @@ h1 span {
   }
 
   .stickers {
-  
-   
     max-width: 210px;
   }
   .sticker {
     width: 110px;
-    
   }
 }

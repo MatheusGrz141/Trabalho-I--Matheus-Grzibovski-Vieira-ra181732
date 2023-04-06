@@ -8,5 +8,11 @@ class View{
         
         `
     }
+    templateErro(){
+        return `
+        <p class="erro">Formulário preenchido incorretamente!</p>
+        
+        `
+    }
     
 }
