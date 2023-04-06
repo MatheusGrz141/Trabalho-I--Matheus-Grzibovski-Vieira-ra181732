@@ -155,7 +155,11 @@ class Controller{
         /*   document.querySelector("#Enviar").disabled = true; */
         document.querySelector("#Diminuir").classList.add("desabilitado");
         /*    document.querySelector("#Enviar").classList.add("desabilitado"); */
-        
+ 
+        const opcoes = document.getElementsByName("check");
+        for (let i = 0; i < opcoes.length; i++) {
+            opcoes[i].checked = false;
+        }
         
     }
     desabilitarEnviar() {
