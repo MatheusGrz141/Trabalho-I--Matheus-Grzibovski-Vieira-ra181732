@@ -15,8 +15,6 @@ class Controller{
         })
         
         this.retivarRadios();
-        
-        
         this.verificarInputZero(); 
         this.init()
         
@@ -35,10 +33,7 @@ class Controller{
             });
             
         });
-    }
-    
-    
-    
+    } 
     adicionar(){
         let valor = parseInt(document.querySelector('#quantidade').value) 
         valor ++;
@@ -47,8 +42,6 @@ class Controller{
         
         if( valor >= 0){
             document.querySelector("#quantidade").classList.remove("erro");
-            /* document.querySelector("#Enviar").disabled = false;
-            document.querySelector("#Enviar").classList.remove("desabilitado"); */
             this.habilitarEnviar();
             document.querySelector("#Diminuir").disabled = false;
             document.querySelector("#Diminuir").classList.remove("desabilitado");
@@ -61,22 +54,16 @@ class Controller{
         
         if( valor > 0){
             
-            /* document.querySelector("#Enviar").disabled = false;
-            document.querySelector("#Enviar").classList.remove("desabilitado");  */
             this.habilitarEnviar();
             document.querySelector("#Diminuir").classList.remove("desabilitado");
             document.querySelector('#quantidade').value=parseInt(valor);
             
         }else { 
             
-            /* document.querySelector("#Enviar").disabled = true;
-            document.querySelector("#Enviar").classList.add("desabilitado"); */
             document.querySelector("#Diminuir").disabled = true;
             document.querySelector("#Diminuir").classList.add("desabilitado"); 
             document.querySelector('#quantidade').value=parseInt(0);
             document.querySelector('#quantidade').classList.add('erro')
-            
-            
         }
     }
     verificarInputZero(){
@@ -90,34 +77,30 @@ class Controller{
                 document.querySelector('#quantidade').classList.add('erro')
             } 
         }); 
-    }
-    
+    } 
     enviar(){
         let texto =document.querySelector("#textArea").value;
         let qtd = parseInt(document.querySelector('#quantidade').value);
-        
         const opcoes = document.getElementsByName("check");
+        
         let opcaoSelecionada;
+        
         for (let i = 0; i < opcoes.length; i++) {
             if (opcoes[i].checked) {
+                
                 opcaoSelecionada = opcoes[i].value;
                 break;
             }
         }
         if(document.querySelector("#quantidade").value == 0 && opcaoSelecionada == undefined){
+            
             document.querySelector("#quantidade").classList.add("erro");
             this.desabilitarEnviar();
-            /* document.querySelector("#Enviar").disabled = true;
-            document.querySelector("#Enviar").classList.add("desabilitado"); */
             document.querySelector(".check").classList.add("erro");
             document.querySelectorAll('.check').forEach((check) => {
                 check.classList.add('erro')
             });
-            this.retornaTemplateErro(opcaoSelecionada, qtd, texto); 
-            /*  let novoModel = new Model(opcaoSelecionada,qtd,texto );
-            let novaView = new View(novoModel)
-            document.querySelector("#mensagem").innerHTML =novaView.templateErro();  */
-            
+            this.retornaTemplateErro(opcaoSelecionada, qtd, texto);     
         }
         else if(opcaoSelecionada == undefined){
             
@@ -126,14 +109,11 @@ class Controller{
             });
             document.querySelector(".check").classList.add("erro");
             this.desabilitarEnviar();
-            /*  document.querySelector("#Enviar").disabled = true;
-            document.querySelector("#Enviar").classList.add("desabilitado"); */
-            /* let novoModel = new Model(opcaoSelecionada,qtd,texto );
-            let novaView = new View(novoModel)
-            document.querySelector("#mensagem").innerHTML =novaView.templateErro();  */
             this.retornaTemplateErro(opcaoSelecionada, qtd, texto); 
+            
         }
         else if(document.querySelector("#quantidade").value == 0){
+            
             document.querySelector("#quantidade").classList.add("erro");
             this.desabilitarEnviar();
             this.retornaTemplateErro(opcaoSelecionada, qtd, texto); 
@@ -146,16 +126,12 @@ class Controller{
             this.init();
         }  
     }
-    
-    
     init(){
         document.querySelector("#textArea").value = ""  
         document.querySelector('#quantidade').value= 0
         document.querySelector("#Diminuir").disabled = true;
-        /*   document.querySelector("#Enviar").disabled = true; */
         document.querySelector("#Diminuir").classList.add("desabilitado");
-        /*    document.querySelector("#Enviar").classList.add("desabilitado"); */
- 
+        
         const opcoes = document.getElementsByName("check");
         for (let i = 0; i < opcoes.length; i++) {
             opcoes[i].checked = false;
@@ -163,20 +139,21 @@ class Controller{
         
     }
     desabilitarEnviar() {
+        
         document.querySelector("#Enviar").disabled = true;
         document.querySelector("#Enviar").classList.add("desabilitado");
     }
     habilitarEnviar() {
+        
         document.querySelector("#Enviar").disabled = false;
         document.querySelector("#Enviar").classList.remove("desabilitado");
     }
     retornaTemplateErro(opcaoSelecionada, qtd, texto) {
+        
         let novoModel = new Model(opcaoSelecionada, qtd, texto);
         let novaView = new View(novoModel);
         document.querySelector("#mensagem").innerHTML = novaView.templateErro();
     }
-    
-    
 }
 
 
