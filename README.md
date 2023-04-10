@@ -28,6 +28,9 @@ Site feito para gerenciar hábitos do dia a dia
 <p align="center">
   <img alt="Tela principal da página para Desktop" src="./imagens/printProjeto.jpeg" width="100%">
 </p>
+<p align="center">
+  <img alt="Tela principal da página para Mobile" src="./imagens/printProjetoMobile.jpeg" width="40%">
+</p>
 
 
 ##  Tecnologias
