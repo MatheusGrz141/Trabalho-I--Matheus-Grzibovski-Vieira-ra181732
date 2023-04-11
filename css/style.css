@@ -302,6 +302,7 @@ h1 span {
   }
   .cabecalho svg {
     width: 100%;
+  
   }
 
   #textArea {
@@ -310,26 +311,9 @@ h1 span {
     margin: 32px 0;
   }
   .caixaEnviar {
-    min-width: 100%;
-    min-height: 200px;
-    margin: auto;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: none;
-  }
-  #mensagem p {
-    margin: auto;
-    font-size: 16px;
   
+    border-radius: 0;
   }
-
-  .botaoEnviar {
-    margin: 0 0 32px 0;
-    padding: 30px;
-    width: 200px;
-    height: auto;
-  }
-
   .stickers {
     max-width: 210px;
   }
