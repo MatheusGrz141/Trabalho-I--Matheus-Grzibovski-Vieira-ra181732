@@ -2,6 +2,7 @@
   font-family: "Inter";
   font-weight: 700;
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -24,13 +25,20 @@ h1 {
   margin: 32px;
   text-align: left;
 }
-h1 span {
+
+.block {
+  display: block;
+  font-weight: 100;
+}
+
+h1 .pacoteBold {
   font-size: 24px;
   font-weight: 700;
   line-height: 35px;
   letter-spacing: 0px;
   text-align: left;
 }
+
 .main {
   width: 560px;
   height: 794px;
@@ -50,13 +58,16 @@ h1 span {
   height: 190px;
   min-width: 560px;
 }
+
 .cabecalho svg {
   position: absolute;
   border-radius: 8px;
 }
+
 .checkBoxs {
   margin-top: 32px;
 }
+
 .checkBoxs p {
   height: 22px;
   left: 6.56%;
@@ -68,6 +79,7 @@ h1 span {
   color: #071723;
   margin-left: 32px;
 }
+
 .stickers {
   width: 486px;
   height: 125px;
@@ -77,10 +89,12 @@ h1 span {
   flex-direction: column;
   padding: 0;
 }
+
 .sticker {
   display: flex;
   align-items: center;
 }
+
 .sticker .check {
   appearance: none;
   border-radius: 4px;
@@ -98,18 +112,22 @@ h1 span {
   background: white;
   transition: 0.2s;
 }
+
 .sticker .check:focus {
   box-shadow: 0 0 5px #2f3676;
   transition: 0.2s;
 }
+
 .stickers .sticker label {
   font-weight: 300;
   cursor: pointer;
   margin: 0 0 0 9px;
 }
+
 .contador {
   height: fit-content;
 }
+
 .contador p {
   margin: 32px 32px 15px 32px;
   height: 22px;
@@ -122,6 +140,7 @@ h1 span {
 
   color: #071723;
 }
+
 .contador div {
   width: fit-content;
 
@@ -156,9 +175,11 @@ h1 span {
   background: #191847;
   cursor: pointer;
 }
+
 .contador .desabilitado {
   background: #c5cfd6;
 }
+
 .contador .desabilitado:hover {
   background: #c5cfd6;
   cursor: not-allowed;
@@ -178,11 +199,13 @@ h1 span {
   border: 1px solid #2f3676;
   border-radius: 4px;
 }
+
 .campoDeTexto {
   margin-left: 32px;
   display: flex;
   flex-direction: column;
 }
+
 .campoDeTexto label {
   height: 22px;
   left: 6.56%;
@@ -208,6 +231,7 @@ h1 span {
   font-weight: 500;
   margin-bottom: 32px;
 }
+
 .caixaEnviar {
   width: 100%;
   height: 101px;
@@ -218,6 +242,7 @@ h1 span {
   justify-content: center;
   box-shadow: 10px 22px 24px rgba(0, 0, 0, 0.5);
 }
+
 .botaoEnviar {
   width: 133px;
   height: 37px;
@@ -231,41 +256,48 @@ h1 span {
   margin: 32px 32px 32px 0;
   border: none;
 }
+
 .botaoEnviar:hover {
   background: #191847;
   border: 2px solid #2f3676;
   border-radius: 7px;
   cursor: pointer;
 }
+
 .caixaEnviar .botaoEnviar.desabilitado {
   background: #c5cfd6;
   border: 2px solid #555555;
   border-radius: 7px;
   color: #555555;
 }
+
 .caixaEnviar .botaoEnviar.desabilitado:hover {
   background: #c5cfd6;
   border: 2px solid #555555;
   border-radius: 7px;
   cursor: not-allowed;
 }
+
 #mensagem {
   width: 80%;
   height: 40px;
   display: flex;
   align-items: center;
 }
+
 #mensagem p {
   font-size: 18px;
   line-height: 21px;
   margin-left: 32px;
   color: #00c57c;
 }
+
 .contador .quantidade.erro {
   background-color: #f59393;
   border: 1px solid #f33232;
   color: #071723;
 }
+
 .sticker .check.erro {
   background-color: #f59393;
   border: 1px solid #f33232;
@@ -278,6 +310,7 @@ h1 span {
 }
 
 @media (max-width: 720px) {
+
   body,
   html {
     min-width: 100%;
@@ -286,6 +319,7 @@ h1 span {
     padding: 0;
     width: 100%;
   }
+
   .main {
     margin: 0;
     width: 100%;
@@ -293,16 +327,19 @@ h1 span {
     max-width: 100%;
     box-shadow: none;
   }
+
   h1 {
     margin: 12px;
   }
+
   .cabecalho {
     width: 100%;
     min-width: 100%;
   }
+
   .cabecalho svg {
     width: 100%;
-  
+
   }
 
   #textArea {
@@ -310,13 +347,16 @@ h1 span {
 
     margin: 32px 0;
   }
+
   .caixaEnviar {
-  
+
     border-radius: 0;
   }
+
   .stickers {
     max-width: 210px;
   }
+
   .sticker {
     width: 110px;
   }
