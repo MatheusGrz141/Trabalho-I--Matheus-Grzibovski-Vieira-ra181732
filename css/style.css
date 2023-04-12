@@ -309,7 +309,7 @@ h1 .pacoteBold {
   color: #f33232;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 550px) {
 
   body,
   html {
@@ -319,6 +319,7 @@ h1 .pacoteBold {
     padding: 0;
     width: 100%;
   }
+ 
 
   .main {
     margin: 0;
@@ -326,6 +327,8 @@ h1 .pacoteBold {
     min-width: 100%;
     max-width: 100%;
     box-shadow: none;
+    min-height: 100vh;
+    
   }
 
   h1 {
@@ -349,8 +352,9 @@ h1 .pacoteBold {
   }
 
   .caixaEnviar {
-
+    min-height: fit-content;
     border-radius: 0;
+    box-shadow: none;
   }
 
   .stickers {
